@@ -1,4 +1,4 @@
-package dev.adrianobrito.app.dao.impl
+package dev.adrianobrito.app.dao
 
 import dev.adrianobrito.app.model.Lamentacao
 import dev.adrianobrito.app.model.Lamentacao

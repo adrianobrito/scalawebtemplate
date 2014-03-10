@@ -2,9 +2,13 @@ package dev.adrianobrito.app
 
 import org.scalatra._
 import scalate.ScalateSupport
+import dev.adrianobrito.app.infra.BasicInjector
+import dev.adrianobrito.app.dao.LamentacaoDao
 
-class BasicServlet extends ScalawebtemplateStack {
+class BasicServlet extends ScalawebtemplateStack with BasicInjector {
 
+  val lamentacaoDao:LamentacaoDao = inject[LamentacaoDao]
+  
   get("/") {
     <html>
       <body> a memoria nao caiu 10
@@ -13,7 +17,11 @@ class BasicServlet extends ScalawebtemplateStack {
     </html>
   }
   
-  get("lamentacao/listar"){
+  get("/lamentacao/listar"){
+    
+  }
+  
+  post("/lamentacao/salvar"){
     
   }
   

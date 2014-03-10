@@ -1,13 +1,13 @@
 package dev.adrianobrito.app.dao.impl
 
-import com.novus.salat._
-import com.novus.salat.global._
-import com.novus.salat.annotations._
-import com.novus.salat.dao._
-import com.mongodb.casbah.Imports._
 import org.bson.types.ObjectId
-import com.mongodb.casbah.MongoConnection
+import com.mongodb.casbah.Imports._
+import com.novus.salat._
+import com.novus.salat.dao._
+import com.novus.salat.global._
 import dev.adrianobrito.app.model.Lamentacao
+import dev.adrianobrito.app.infra.CollectionFactory
+import dev.adrianobrito.app.dao.LamentacaoDao
 
 class LamentacaoDaoImpl extends LamentacaoDao{
 
@@ -19,5 +19,6 @@ class LamentacaoDaoImpl extends LamentacaoDao{
    LamentacaoDaoManager.find(ref = MongoDBObject()).toList
   }
   
+  
 }
-object LamentacaoDaoManager extends SalatDAO[Lamentacao, ObjectId](collection = MongoConnection()("scalatemplate")("lamentacoes"))
+object LamentacaoDaoManager extends SalatDAO[Lamentacao, ObjectId](collection = CollectionFactory.get("lamentacoes"))
