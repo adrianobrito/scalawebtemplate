@@ -84,7 +84,7 @@ get_script_path () {
 # so they need not be dicked around with individually.
 get_mem_opts () {
   local mem=${1:-1536}
-  local perm=$(( $mem / 4 ))
+  local perm=$(( $mem / 2 ))
   (( $perm > 256 )) || perm=256
   (( $perm < 1024 )) || perm=1024
   local codecache=$(( $perm / 2 ))
