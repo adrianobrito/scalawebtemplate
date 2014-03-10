@@ -1,17 +1,15 @@
 package dev.adrianobrito.app.dao.test
 
+import java.util.Date
+
+import org.scalatest.BeforeAndAfter
 import org.scalatest.FlatSpec
 import org.scalatest.Matchers
-import org.joda.time.DateTime
-import dev.adrianobrito.app.dao.impl.LamentacaoDaoImpl
-import dev.adrianobrito.app.model.Lamentacao
-import java.util.Date
-import org.scalatest.BeforeAndAfter
+
+import dev.adrianobrito.app.dao.impl.LamentacaoDao
 import dev.adrianobrito.app.dao.impl.LamentacaoDaoManager
 import dev.adrianobrito.app.infra.BasicInjector
-import dev.adrianobrito.app.dao.impl.LamentacaoDao
-import dev.adrianobrito.app.dao.impl.LamentacaoDao
-import dev.adrianobrito.app.dao.impl.LamentacaoDao
+import dev.adrianobrito.app.model.Lamentacao
 
 class LamentacaoDaoSpec extends FlatSpec with Matchers with BeforeAndAfter with BasicInjector{
   
