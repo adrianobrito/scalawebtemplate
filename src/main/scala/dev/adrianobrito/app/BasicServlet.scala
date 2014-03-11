@@ -17,12 +17,4 @@ class BasicServlet extends ScalawebtemplateStack with BasicInjector {
     </html>
   }
   
-  get("/lamentacao/listar"){
-    
-  }
-  
-  post("/lamentacao/salvar"){
-    
-  }
-  
 }
