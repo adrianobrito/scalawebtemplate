@@ -6,7 +6,7 @@ It's a demonstration of Lamentation's Wall(Muro das Lamentações in Portuguese)
 
 ###Frameworks
 - Scalatra 
-- Salar and Cashbah (For MongoDB)
+- Salat and Cashbah (For MongoDB)
 - Google GUICE (DI)
 
 ###Dependencies
