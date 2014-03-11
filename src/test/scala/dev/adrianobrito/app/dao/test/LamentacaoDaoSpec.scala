@@ -11,7 +11,7 @@ import dev.adrianobrito.app.dao.LamentacaoDao
 
 class LamentacaoDaoSpec extends FlatSpec with Matchers with BeforeAndAfter with BasicInjector{
   
-  val lamentacaoDao:LamentacaoDao = inject[LamentacaoDao];
+  val lamentacaoDao:LamentacaoDao = inject[LamentacaoDao]();
   
   "LamentacaoDao" should " salvar uma lamentação " in {
     val listaAntiga:List[Lamentacao] = lamentacaoDao.listar

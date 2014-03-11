@@ -9,6 +9,7 @@ class MyScalatraServletSpec extends ScalatraSpec { def is =
                                                 end
 
   addServlet(classOf[BasicServlet], "/*")
+  addServlet(classOf[LamentacaoServlet], "/lamentacao/*")
 
   def root200 = get("/") {
     status must_== 200
