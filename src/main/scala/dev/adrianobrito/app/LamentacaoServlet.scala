@@ -9,6 +9,7 @@ import dev.adrianobrito.app.dao.LamentacaoDao
 import dev.adrianobrito.app.model.Lamentacao
 import java.util.Date
 import dev.adrianobrito.app.model.Lamentacao
+import org.scalatra.Ok
 
 class LamentacaoServlet extends ScalawebtemplateStack 
 						with BasicInjector
@@ -26,11 +27,10 @@ class LamentacaoServlet extends ScalawebtemplateStack
   }
   
   post("/salvar"){
-    println(request.body)
 	println(parsedBody)
-	println(parse(request.body))
     val lamentacao:Lamentacao = parsedBody.extract[Lamentacao]
     lamentacaoDao salvar(lamentacao)
+	Ok();
   }
   
 }
